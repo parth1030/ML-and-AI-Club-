@@ -3,5 +3,11 @@ All gaming projects from the club will be here!
 
 Pygame Documents: https://www.pygame.org/docs/
 
+pip3 install pygame
+
+pip install pygame
+
+
+
 
 
