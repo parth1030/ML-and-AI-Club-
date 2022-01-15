@@ -1,4 +1,5 @@
 import pygame
+import time
  
 # Define some colors
 BLACK = (0, 0, 0)
