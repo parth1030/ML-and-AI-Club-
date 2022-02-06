@@ -1,5 +1,4 @@
 import pygame
-import time
  
 # Define some colors
 BLACK = (0, 0, 0)
@@ -49,8 +48,16 @@ while not done:
     for event in pygame.event.get():  # User did something
         if event.type == pygame.QUIT:  # If user clicked close
             done = True  # Flag that we are done so we exit this loop
-        elif event.type == pygame.:
-          
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            # User clicks the mouse. Get the position
+            pos = pygame.mouse.get_pos()
+            # Change the x/y screen coordinates to grid coordinates
+            column = pos[0] // (WIDTH + MARGIN)
+            row = pos[1] // (HEIGHT + MARGIN)
+            # Set that location to one
+            grid[row][column] = 1
+            print("Click ", pos, "Grid coordinates: ", row, column)
+ 
     # Set the screen background
     screen.fill(BLACK)
  
